@@ -75,10 +75,10 @@ const Nav = () => {
                 <div className="sub-section">
                     <ul>
                         <li>
-                            <Link to="/get-inlvolved/careers">Careers</Link>
+                            <Link to="/get-involved/careers">Careers</Link>
                         </li>
                         <li>
-                            <Link to="/get-inlvolved/volunteer-with-an-orphanage">
+                            <Link to="/get-involved/volunteer-with-an-orphanage">
                                 Volunteer
                             </Link>
                         </li>
@@ -88,10 +88,10 @@ const Nav = () => {
                                 <img src="/images/drop-down.svg" alt="" />
                             </div>
                             <div className="sub-sub-links">
-                                <Link to="/get-inlvolved/grocery-stores">
+                                <Link to="/get-involved/grocery-stores">
                                     Grocery Stores
                                 </Link>
-                                <Link to="/get-inlvolved/orphanages">
+                                <Link to="/get-involved/orphanages">
                                     Orphanages
                                 </Link>
                             </div>

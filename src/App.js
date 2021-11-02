@@ -1,3 +1,4 @@
+import Error404 from "./Error404";
 import React from "react";
 import { Route, Switch } from "react-router";
 import { BrowserRouter } from "react-router-dom";
@@ -10,6 +11,7 @@ import Recources from "./components/Resources";
 import WhyUs from "./components/WhyUs";
 import Footer from "./Footer";
 import Nav from "./Nav";
+import GetInvolved from "./components/GetInvolved";
 
 function App() {
     return (
@@ -17,11 +19,17 @@ function App() {
             <BrowserRouter>
                 <Nav />
                 <Switch>
+                    <Route exact path="/">
+                        <Home />
+                    </Route>
                     <Route path="/about-us">
                         <AboutUs />
                     </Route>
                     <Route path="/why-us">
                         <WhyUs />
+                    </Route>
+                    <Route path="/get-involved">
+                        <GetInvolved />
                     </Route>
                     <Route path="/recources">
                         <Recources />
@@ -32,8 +40,8 @@ function App() {
                     <Route path="/survey">
                         <Survey />
                     </Route>
-                    <Route path="/">
-                        <Home />
+                    <Route>
+                        <Error404 />
                     </Route>
                 </Switch>
                 <Footer />

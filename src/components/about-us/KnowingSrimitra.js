@@ -7,7 +7,7 @@ const KnowingSrimitra = () => {
             <div className="container">
                 <h2 className="title">What is SriMitra?</h2>
                 <div className="intro">
-                    <div className="p2 quote intro-text">
+                    <div className=" quote intro-text">
                         Imagine a young orphan kid, dressed in tatters that
                         barely covers him in the cold harsh winters, standing
                         along the road, begging for alms. His blue shivering
@@ -22,12 +22,12 @@ const KnowingSrimitra = () => {
                         to lack of a method to help them we continue on our way
                         with our hearts laden heavy with despair.
                     </div>
-                    <img
+                    {/* <img
                         className="intro-png"
                         src="/images/hello.png"
                         alt=""
                         srcSet=""
-                    />
+                    /> */}
                 </div>
                 <h3 className="title">Here’s where SriMitra comes in</h3>
                 <div className="para">
@@ -112,6 +112,7 @@ const Container = styled.section`
     @media (min-width: 700px) {
         .container {
             /* border: 1px solid; */
+            font-weight: 500;
             max-width: 1440px;
             width: 100%;
             height: max-content;
@@ -127,7 +128,7 @@ const Container = styled.section`
                 .quote {
                     display: flex;
                     align-items: center;
-                    padding: 4rem;
+                    /* padding: 4rem; */
                 }
                 .intro-png {
                     /* height: 200px; */
