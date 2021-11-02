@@ -1,38 +1,237 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Roboto:wght@100;300;400;500;700;900&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap");
+
+html {
+  /* font-size: 100%; */
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+  font-family: Roboto;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+body {
+  position: relative;
+  /* background: rgb(0, 0, 0); */
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  max-width: 100vw !important;
+  background-color: black;
+  width: 100vw;
+  overflow-x: hidden;
+  position: relative;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  position: relative;
+  /* align-items: center; */
+  max-width: 100vw;
+}
+
+@media (min-width: 600px) {
+  .App {
+    overflow-x: hidden;
+    width: 100vw !important;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+section {
+  scroll-snap-align: start;
+  width: 100%;
+  /* border: 1px solid rgb(0, 0, 0); */
+  padding: 2rem;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.cta {
+  background: white;
+  border-radius: 0.313rem;
+  padding: 0.5rem 1.2rem;
+  font-weight: 500;
+  color: black;
+  border: 2px solid white;
+  width: max-content;
+  letter-spacing: 1px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.cta-sec {
+  background: none;
+  color: white;
+}
+
+.cta:hover {
+  background: none;
+  color: white;
+  transition: all 0.1s ease-in;
+}
+
+h1 {
+  font-family: "Abril Fatface", cursive;
+  font-style: normal;
+  font-weight: normal;
+  letter-spacing: 2px;
+  font-size: 4.5rem;
+}
+
+h2 {
+  font-family: "Abril Fatface", cursive;
+  font-style: normal;
+  font-weight: normal;
+  letter-spacing: 2px;
+  font-size: 2rem;
+}
+
+.quote {
+  padding: 1em;
+  border-left: 2px solid rgb(0, 100, 114);
+  background-color: hsl(187, 29%, 85%);
+  letter-spacing: 1px;
+  font-weight: 450;
+}
+
+h3 {
+  font-family: "Abril Fatface", cursive;
+  font-style: normal;
+  font-weight: normal;
+  letter-spacing: 2px;
+  font-size: 1.7rem;
+}
+
+.p1 {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.5rem;
+}
+
+.p2 {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1rem;
+}
+
+.p3 {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 0.9rem;
+}
+
+.title {
+  padding-bottom: 0.2rem;
+  border-bottom: 2px solid;
+  /* width: max-content; */
+}
+
+@media (min-width: 600px) {
+  .title {
+    padding-bottom: 1rem;
+    border-bottom: 3px solid;
+    /* width: max-content; */
   }
-  to {
-    transform: rotate(360deg);
+
+  .quote {
+    border-left: 4px solid rgb(0, 100, 114);
+    border-radius: 0.2rem;
+    font-size: 1.5rem;
+    padding: 1em;
   }
+}
+
+@media only screen and (min-width: 900px) {
+  section {
+    width: 100%;
+    padding: 4rem;
+  }
+
+  h1 {
+    letter-spacing: 2px;
+    font-size: 5rem;
+  }
+
+  h2 {
+    letter-spacing: 2px;
+    font-size: 3.8rem;
+  }
+
+  h3 {
+    letter-spacing: 2px;
+    font-size: 3rem;
+  }
+
+  .p1 {
+    font-size: 28px;
+    letter-spacing: 1px;
+  }
+
+  .p2 {
+    font-size: 18px;
+    letter-spacing: 2px;
+  }
+
+  .p3 {
+    font-size: 16px;
+    letter-spacing: 1px;
+  }
+
+  .footer {
+    background: #000000;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 1.5rem;
+    color: white;
+  }
+  .sub-sec {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 2.5rem;
+
+    /* border: 1px solid; */
+    width: 100%;
+  }
+
+  .links-box {
+    display: flex;
+    flex-direction: row;
+    /* border: 1px solid; */
+    justify-content: flex-start;
+    gap: 2rem;
+  }
+
+  .link-box {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    /* border: 1px solid; */
+    width: 100%;
+  }
+  .link-heading {
+    font-size: 1.2rem;
+    font-weight: 400;
+    /* letter-spacing: 1px; */
+  }
+
+  a {
+    font-weight: 300;
+    font-size: 1.2rem;
+  }
+
+  /* a:hover {
+    opacity: 0.8;
+  } */
 }
