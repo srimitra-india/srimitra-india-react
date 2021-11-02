@@ -1,11 +1,7 @@
-import react from "react";
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import styled from "styled-components";
 
 const Accordian = (props) => {
-    console.log(props.ques);
-
     const [expanded, setExpanded] = useState(false);
     // .accordian-open
 
@@ -14,8 +10,8 @@ const Accordian = (props) => {
             className={!expanded ? "accordian" : "accordian accordian-open"}
             onClick={() => setExpanded(!expanded)}
         >
-            <div class="question">
-                <p class="ques p2">{props.ques.ques}</p>
+            <div className="question">
+                <p className="ques p2">{props.ques.ques}</p>
                 <img className="toggle" src="/images/faq-toggle.png" alt="" />
             </div>
             <div
@@ -25,34 +21,33 @@ const Accordian = (props) => {
                         : "answer-container answer-container-open"
                 }
             >
-                {props.ques.ansType == "text" ? (
-                    <p class="answer p3">{props.ques.answer}</p>
+                {props.ques.ansType === "text" ? (
+                    <p className="answer p3">{props.ques.answer}</p>
                 ) : (
                     ""
                 )}
 
-                {props.ques.ansType == "img" ? (
+                {props.ques.ansType === "img" ? (
                     <img
                         className="img-ans"
                         src={props.ques.answer}
                         alt=""
-                        srcset=""
+                        srcSet=""
                     />
                 ) : (
                     ""
                 )}
 
-                {props.ques.ansType == "link" ? (
+                {props.ques.ansType === "link" ? (
                     <>
-                        <p class="answer p3">{props.ques.answer}</p>
+                        <p className="answer p3">{props.ques.answer}</p>
                         <div
                             className="links"
                             style={{ textDecoration: "underlined" }}
                         >
                             {props.ques.links.map((link, key) => (
-                                <Link to={link.add}>
+                                <Link key={key} to={link.add}>
                                     {link.name}
-                                    {console.log(link)}
                                 </Link>
                             ))}
                         </div>

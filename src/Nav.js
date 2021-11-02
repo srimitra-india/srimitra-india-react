@@ -12,7 +12,6 @@ const Nav = () => {
     // const navbar = document.querySelector("#navbar");
 
     const [showMenu, setShowmenu] = useState(false);
-    const [showSublinks, setShowSublinks] = useState(false);
 
     let menu;
 

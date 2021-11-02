@@ -26,7 +26,7 @@ const KnowingSrimitra = () => {
                         className="intro-png"
                         src="/images/hello.png"
                         alt=""
-                        srcset=""
+                        srcSet=""
                     />
                 </div>
                 <h3 className="title">Here’s where SriMitra comes in</h3>

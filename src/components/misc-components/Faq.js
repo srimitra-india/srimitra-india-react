@@ -1,23 +1,22 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import styled from "styled-components";
 import faqQues from "../../data/questions";
 import Accordian from "./Accordian";
 
 const Faq = () => {
     return (
-        <Container class="faq">
-            <div class="title-section">
-                <h3 class="title">
+        <Container className="faq">
+            <div className="title-section">
+                <h3 className="title">
                     Have A Question?? <br /> Look Here..
                 </h3>
             </div>
-            <div class="faq-container">
+            <div className="faq-container">
                 {faqQues.map((ques, key) => (
-                    <>
-                        <Accordian class="accordian" ques={ques} />
-                        <div class="line"></div>
-                    </>
+                    <div className="div" key={key} style={{ width: 100 + "%" }}>
+                        <Accordian className="accordian" ques={ques} />
+                        <div className="line"></div>
+                    </div>
                 ))}
             </div>
         </Container>

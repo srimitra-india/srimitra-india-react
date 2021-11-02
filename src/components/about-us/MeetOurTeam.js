@@ -6,10 +6,10 @@ const MeetOurTeam = () => {
     return (
         <Container>
             <div className="team_members">
-                <div class="left-col col">
-                    <div class="sub-section">
-                        <h2 class="title">Meet Our Team</h2>
-                        <p class="section-des">
+                <div className="left-col col">
+                    <div className="sub-section">
+                        <h2 className="title">Meet Our Team</h2>
+                        <p className="section-des">
                             SriMitra is all of us when we decide to take action
                             to make a difference in the lives of these precious
                             children. SriMitra is all of us when we decide to
@@ -18,26 +18,26 @@ const MeetOurTeam = () => {
                     </div>
                 </div>
 
-                <div class="right-col col">
+                <div className="right-col col">
                     {teamMemberData &&
-                        teamMemberData.map((member) => (
+                        teamMemberData.map((member, key) => (
                             <>
-                                <div class="member">
-                                    <div class="member-photo-container">
+                                <div className="member" key={key}>
+                                    <div className="member-photo-container">
                                         <img
-                                            class="member-image"
+                                            className="member-image"
                                             src={member.memberPhotoReal}
                                             alt=""
-                                            srcset=""
+                                            srcSet=""
                                         />
                                     </div>
-                                    <div class="member-name">
+                                    <div className="member-name">
                                         {member.memberName}
                                     </div>
-                                    <div class="member-post">
+                                    <div className="member-post">
                                         {member.memberPost}
                                     </div>
-                                    <div class="member-des">
+                                    <div className="member-des">
                                         {member.memberStory}
                                     </div>
                                 </div>

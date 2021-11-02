@@ -46,27 +46,29 @@ const Survey = () => {
     };
     return (
         <Container>
-            <section class="form-section">
-                <div class="title">
-                    <span class="">👋🏻</span>
-                    <p class="p2 intro-text">
+            <section className="form-section">
+                <div className="title">
+                    <span className="" role="img" aria-label="emoji">
+                        👋🏻
+                    </span>
+                    <p className="p2 intro-text">
                         Hello There, How are you doing... <br />
                         Let's start by Knowing about your some more.
                     </p>
                 </div>
 
                 <form
-                    class="form-container"
+                    className="form-container"
                     name="questionnaire"
                     onSubmit={handleSubmit}
                     method="POST"
                 >
-                    <div class="input-box">
-                        <label class="label p2" for="name">
+                    <div className="input-box">
+                        <label className="label p2" for="name">
                             Name
                         </label>
                         <input
-                            class="input-field"
+                            className="input-field"
                             id="name"
                             placeholder="Your Name"
                             type="text"
@@ -74,12 +76,12 @@ const Survey = () => {
                             onChange={(e) => setName(e.target.value)}
                         />
                     </div>
-                    <div class="input-box">
-                        <p class="p p2" for="age">
+                    <div className="input-box">
+                        <p className="p p2" for="age">
                             Age
                         </p>
 
-                        <div class="radio-buttons">
+                        <div className="radio-buttons">
                             <div>
                                 <input
                                     type="radio"
@@ -153,7 +155,7 @@ const Survey = () => {
                         </div>
                     </div>
 
-                    <div class="input-box">
+                    <div className="input-box">
                         <label for="profession">Profession</label>
                         <select
                             name="profession"
@@ -167,7 +169,7 @@ const Survey = () => {
                         </select>
                     </div>
 
-                    <div class="input-box">
+                    <div className="input-box">
                         <label for="reason-of-no-trust">
                             Why do you not trust donation platforms or
                             organizations?
@@ -187,7 +189,7 @@ const Survey = () => {
                         </select>
                     </div>
 
-                    <div class="input-box">
+                    <div className="input-box">
                         <label for="reason-of-not-donating">
                             Why do you not donate?
                         </label>
@@ -210,13 +212,13 @@ const Survey = () => {
                         </select>
                     </div>
 
-                    <div class="input-box">
+                    <div className="input-box">
                         <label for="likelines-for-mobile-app">
                             How likely are you to adopt an easy convenient
                             mobile app like SriMitra for donation?
                         </label>
 
-                        <div class="radio-buttons">
+                        <div className="radio-buttons">
                             <div>
                                 <input
                                     type="radio"
@@ -280,7 +282,7 @@ const Survey = () => {
                         </div>
                     </div>
 
-                    <div class="input-box">
+                    <div className="input-box">
                         <label for="frequency-of-donation">
                             How frequently would you like to donate?
                         </label>
@@ -297,7 +299,7 @@ const Survey = () => {
                         </select>
                     </div>
 
-                    <div class="input-box">
+                    <div className="input-box">
                         <label for="amount-for-donation">
                             How much would you prefer to donate?
                         </label>
@@ -320,7 +322,7 @@ const Survey = () => {
                         type="submit"
                         name="Submit"
                         id="submit"
-                        class="button cta"
+                        className="button cta"
                         value="Submit"
                     />
                 </form>

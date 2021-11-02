@@ -4,7 +4,7 @@ import styled from "styled-components";
 const VisionMission = () => {
     return (
         <Container>
-            <div class="box">
+            <div className="box">
                 <div className="vision_mission">
                     <h2 className="title">Our Mision</h2>
                     <div className="ans quote">

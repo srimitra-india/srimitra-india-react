@@ -8,49 +8,49 @@ import { Link } from "react-router-dom";
 const Home = () => {
     return (
         <Container>
-            <section class="landing-page">
+            <section className="landing-page">
                 <div style={{ height: 70 + "px" }}></div>
-                <div class="landing-text">
+                <div className="landing-text">
                     <h1>Building The Future</h1>
-                    <p class="p2 cta-text">
+                    <p className="p2 cta-text">
                         We are a community dedicated to food adequacy for
                         destitute children. <br /> We make donations simpler,
                         direct and real.
                     </p>
-                    <div class="cta-container">
-                        <Link class="cta" to="/survey">
-                            Hello There 👋🏻
+                    <div className="cta-container">
+                        <Link className="cta" to="/survey">
+                            Hello There{" "}
+                            <span aria-label="emoji" role="img">
+                                👋🏻
+                            </span>
                         </Link>
-                        <a href="#" class="cta cta-sec">
+                        <Link to="/" className="cta cta-sec">
                             Explore child care centers near you
-                        </a>
+                        </Link>
                     </div>
                 </div>
                 <img
-                    class="landing-image"
+                    className="landing-image"
                     src="/images/landing-img.png"
                     alt=""
                 />
             </section>
-            <section class="vision-mission">
-                <h3 class="title col">
+            <section className="vision-mission">
+                <h3 className="title col">
                     Our <br /> Vision & Mission
-                    <a href="#" class="send-to-link">
-                        Read More About Us
-                    </a>
                 </h3>
-                <div class="vision-mission-description col">
-                    <div class="vision vmcard">
-                        <div class="card-title p1">Vision</div>
-                        <div class="card-text p2">
+                <div className="vision-mission-description col">
+                    <div className="vision vmcard">
+                        <div className="card-title p1">Vision</div>
+                        <div className="card-text p2">
                             Building the future of Orphan kids to help
                             strengthen civil society by enhancing the
                             effectiveness of philanthropy.
                         </div>
                     </div>
-                    <div class="mission vmcard">
-                        <div class="card-title p1">Mission</div>
-                        <div class="card-text p2">
+                    <div className="mission vmcard">
+                        <div className="card-title p1">Mission</div>
+                        <div className="card-text p2">
                             To facilitate the allocation of private resources of
                             money, assets, time and skills to be shared
                             willingly, and used efficiently with transparency;
@@ -60,68 +60,71 @@ const Home = () => {
                     </div>
                 </div>
             </section>
-            <section class="app-coming-soon">
-                <div class="circle1 circle"></div>
-                <div class="circle2 circle"></div>
-                <div class="sub-section">
-                    <h3 class="title app-coming-soon-title">
+            <section className="app-coming-soon">
+                <div className="circle1 circle"></div>
+                <div className="circle2 circle"></div>
+                <div className="sub-section">
+                    <h3 className="title app-coming-soon-title">
                         <img
                             src="/images/Logo_butterfly_only.png"
                             alt=""
-                            srcset=""
+                            srcSet=""
                         />
                         Mobile App Coming Soon
                     </h3>
-                    <a href="#" class="send-to-link app-coming-soon-cta-link">
+                    <a
+                        href="/"
+                        className="send-to-link app-coming-soon-cta-link"
+                    >
                         Download on Playstore
                     </a>
                 </div>
                 <img
-                    class="app-coming-soon-img"
+                    className="app-coming-soon-img"
                     src="./images/app_coming_soon.png"
                     alt=""
-                    srcset=""
+                    srcSet=""
                 />
             </section>
-            <section class="partners">
-                <h3 class="title">Partners</h3>
-                <div class="brands">
-                    <div class="brand"></div>
-                    <div class="brand"></div>
-                    <div class="brand"></div>
-                    <div class="brand"></div>
-                    <div class="brand"></div>
-                    <div class="brand"></div>
-                    <div class="brand"></div>
-                    <div class="brand"></div>
+            <section className="partners">
+                <h3 className="title">Partners</h3>
+                <div className="brands">
+                    <div className="brand"></div>
+                    <div className="brand"></div>
+                    <div className="brand"></div>
+                    <div className="brand"></div>
+                    <div className="brand"></div>
+                    <div className="brand"></div>
+                    <div className="brand"></div>
+                    <div className="brand"></div>
                 </div>
             </section>
-            <section class="team-members">
-                <div class="bkg">
-                    <h3 class="title">Our Team</h3>
-                    <div class="slider">
-                        <div class="members">
+            <section className="team-members">
+                <div className="bkg">
+                    <h3 className="title">Our Team</h3>
+                    <div className="slider">
+                        <div className="members">
                             {teamMemberData &&
-                                teamMemberData.map((member) => (
+                                teamMemberData.map((member, key) => (
                                     <>
-                                        <div class="member">
-                                            <div class="member-detail">
+                                        <div className="member" key={key}>
+                                            <div className="member-detail">
                                                 <img
-                                                    class="member-photo"
+                                                    className="member-photo"
                                                     src={member.memberPhoto}
                                                     alt=""
-                                                    srcset=""
+                                                    srcSet=""
                                                 />
-                                                <div class="name-post">
-                                                    <p class="p1 member-name">
+                                                <div className="name-post">
+                                                    <p className="p1 member-name">
                                                         {member.memberName}
                                                     </p>
-                                                    <p class="p2 member-post">
+                                                    <p className="p2 member-post">
                                                         {member.memberPost}
                                                     </p>
                                                 </div>
                                             </div>
-                                            <p class="p3 member-description">
+                                            <p className="p3 member-description">
                                                 {member.memberDescription}
                                             </p>
                                         </div>
@@ -131,34 +134,34 @@ const Home = () => {
                     </div>
                 </div>
             </section>
-            <section class="testimonials-section">
-                <div class="title-section">
-                    <h3 class="title">Testimonials</h3>
-                    <div class="p2">What our clients has to say.</div>
+            <section className="testimonials-section">
+                <div className="title-section">
+                    <h3 className="title">Testimonials</h3>
+                    <div className="p2">What our clients has to say.</div>
                 </div>
-                <div class="slider">
-                    <div class="testimonials">
+                <div className="slider">
+                    <div className="testimonials">
                         {testimonialsData &&
                             testimonialsData.map((testimonial, key) => (
                                 <>
-                                    <div class="testimonial">
-                                        <div class="top-banner">
+                                    <div className="testimonial" key={key}>
+                                        <div className="top-banner">
                                             <img
                                                 src={
                                                     testimonial.testimonialPhoto
                                                 }
                                                 alt=""
-                                                srcset=""
+                                                srcSet=""
                                             />
                                         </div>
-                                        <div class="bottom">
-                                            <p class="p3 testimonial-msg">
+                                        <div className="bottom">
+                                            <p className="p3 testimonial-msg">
                                                 {testimonial.testimonialMsg}
                                             </p>
-                                            <p class="p1 testimonial-name">
+                                            <p className="p1 testimonial-name">
                                                 {testimonial.testimonialName}
                                             </p>
-                                            <p class="p2 testimonial-company">
+                                            <p className="p2 testimonial-company">
                                                 {
                                                     testimonial.testimonialCompanyName
                                                 }
@@ -167,7 +170,7 @@ const Home = () => {
                                     </div>
                                 </>
                             ))}
-                        <div class="testimonial null-div"></div>
+                        <div className="testimonial null-div"></div>
                     </div>
                 </div>
             </section>

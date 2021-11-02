@@ -39,23 +39,25 @@ const ContactUs = () => {
 
     return (
         <Container className="form-section">
-            <div class="title">
-                <span class="">👋🏻</span>
-                <p class="p2 intro-text">Hello, Lets get in touch.</p>
+            <div className="title">
+                <span className="" role="img" aria-label="emoji">
+                    👋🏻
+                </span>
+                <p className="p2 intro-text">Hello, Lets get in touch.</p>
             </div>
             <form
                 onSubmit={handleSubmit}
                 method="POST"
-                class="form-container"
+                className="form-container"
                 name="contact-us"
             >
-                <div class="input-box">
-                    <label class="label p2" for="name">
+                <div className="input-box">
+                    <label className="label p2" for="name">
                         Name
                     </label>
                     <input
                         autocomplete="off"
-                        class="input-field"
+                        className="input-field"
                         id="name"
                         placeholder="Your Name"
                         type="text"
@@ -63,13 +65,13 @@ const ContactUs = () => {
                         onChange={(e) => setName(e.target.value)}
                     />
                 </div>
-                <div class="input-box">
-                    <label class="label p2" for="email">
+                <div className="input-box">
+                    <label className="label p2" for="email">
                         Email
                     </label>
                     <input
                         autocomplete="off"
-                        class="input-field"
+                        className="input-field"
                         id="email"
                         placeholder="Your Email"
                         type="text"
@@ -77,13 +79,13 @@ const ContactUs = () => {
                         onChange={(e) => setEmail(e.target.value)}
                     />
                 </div>
-                <div class="input-box">
-                    <label class="label p2" for="phone">
+                <div className="input-box">
+                    <label className="label p2" for="phone">
                         Phone No.
                     </label>
                     <input
                         autocomplete="off"
-                        class="input-field"
+                        className="input-field"
                         id="phone"
                         placeholder="Your Phone Number"
                         type="text"
@@ -91,17 +93,16 @@ const ContactUs = () => {
                         onChange={(e) => setPhone(e.target.value)}
                     />
                 </div>
-                <div class="input-box">
-                    <label class="label p2" for="message">
+                <div className="input-box">
+                    <label className="label p2" for="message">
                         Message
                     </label>
                     <textarea
                         autocomplete="off"
-                        class="input-field"
+                        className="input-field"
                         id="message"
                         placeholder="Your Message"
                         name="Message"
-                        id=""
                         cols="30"
                         rows="5"
                         onChange={(e) => setMessage(e.target.value)}
@@ -112,7 +113,7 @@ const ContactUs = () => {
                     type="submit"
                     name="Submit"
                     id="submit"
-                    class="button cta"
+                    className="button cta"
                     value="Submit"
                 />
             </form>
