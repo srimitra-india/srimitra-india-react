@@ -775,10 +775,12 @@ const Container = styled.div`
                 gap: 1rem;
                 width: 800px;
                 text-align: center;
+                line-height: 1;
 
                 .cta-text {
                     font-size: 1.2rem;
                     max-width: 575px !important;
+                    line-height: 1.2;
                 }
 
                 .cta-container {

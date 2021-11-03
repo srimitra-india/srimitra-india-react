@@ -157,7 +157,7 @@ const Nav = () => {
     if (showMenu) {
         menu = (
             <>
-                <ul className="nav-link nav-open mobile" id="navLink">
+                <ul className="mobile nav-link nav-open" id="navLink">
                     <li className="link-grp">
                         <Link to="/" className="links-grp-heading">
                             Home
@@ -222,12 +222,12 @@ const Nav = () => {
                         <div className="sub-section">
                             <ul>
                                 <li>
-                                    <Link to="/get-inlvolved/careers">
+                                    <Link to="/get-involved/careers">
                                         Careers
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link to="/get-inlvolved/volunteer-with-an-orphanage">
+                                    <Link to="/get-involved/volunteer-with-an-orphanage">
                                         Volunteer
                                     </Link>
                                 </li>
@@ -240,10 +240,10 @@ const Nav = () => {
                                         />
                                     </div>
                                     <div className="sub-sub-links">
-                                        <Link to="/get-inlvolved/grocery-stores">
+                                        <Link to="/get-involved/grocery-stores">
                                             Grocery Stores
                                         </Link>
-                                        <Link to="/get-inlvolved/orphanages">
+                                        <Link to="/get-involved/orphanages">
                                             Orphanages
                                         </Link>
                                     </div>
@@ -465,6 +465,9 @@ const Container = styled.div`
                             flex-direction: column;
                             gap: 0.6rem;
                             .sub-links-grp-heading {
+                                font-size: 1rem !important;
+                                font-weight: 400 !important;
+
                                 cursor: pointer;
                                 display: flex;
                                 align-items: center;
@@ -616,8 +619,8 @@ const Container = styled.div`
                             li {
                                 width: max-content;
                                 a {
-                                    font-size: 1.2rem;
-                                    font-weight: 500;
+                                    font-size: 1rem !important;
+                                    /* font-weight: 500; */
                                 }
                             }
 

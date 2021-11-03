@@ -54,7 +54,7 @@ section {
   scroll-snap-align: start;
   width: 100%;
   /* border: 1px solid rgb(0, 0, 0); */
-  padding: 2rem;
+  padding: 1.5rem;
   color: white;
 }
 
@@ -179,7 +179,7 @@ h3 {
 
   .p2 {
     font-size: 18px;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
   }
 
   .p3 {
