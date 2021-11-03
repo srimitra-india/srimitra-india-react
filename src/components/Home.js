@@ -86,7 +86,7 @@ const Home = () => {
                     srcSet=""
                 />
             </section>
-            <section className="partners">
+            {/* <section className="partners">
                 <h3 className="title">Partners</h3>
                 <div className="brands">
                     <div className="brand"></div>
@@ -98,7 +98,7 @@ const Home = () => {
                     <div className="brand"></div>
                     <div className="brand"></div>
                 </div>
-            </section>
+            </section> */}
             <section className="team-members">
                 <div className="bkg">
                     <h3 className="title">Our Team</h3>

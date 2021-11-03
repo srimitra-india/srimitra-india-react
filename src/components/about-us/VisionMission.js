@@ -33,7 +33,7 @@ const Container = styled.section`
     margin-top: 70px;
     background: hsl(0, 0%, 100%, 0.9);
     position: relative;
-    color: black;
+    color: hsl(187, 100%, 12%);
     display: flex;
     gap: 1rem;
     flex-direction: column;
@@ -58,8 +58,6 @@ const Container = styled.section`
     .title {
         border: none;
         padding: 0;
-
-        color: rgb(0, 100, 114);
     }
 
     @media (min-width: 600px) {

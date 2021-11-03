@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Careers = () => {
     return (
@@ -13,162 +14,39 @@ const Careers = () => {
                 </div>
                 <div className="jobs_panel">
                     <div className="topic">Jobs at Srimitra</div>
-                    <div className="jobs">
-                        <div className="job">
-                            <div className="job_title">UX Writer</div>
-                            <div className="job_des">
-                                Lorem, ipsum dolor sit amet consectetur
-                                adipisicing elit. Quia nulla voluptatibus
-                                aspernatur autem architecto deleniti. Lorem
-                                ipsum dolor, sit amet consectetur adipisicing
-                                elit. Inventore sit est error quam eos veritatis
-                                laudantium non, ipsam nulla repellendus
-                                architecto qui dolor minus delectus.
-                            </div>
-                            <div className="job_options">
-                                <div className="jobs_details">
-                                    <div className="job_type">Fulltime</div>•
-                                    <div className="job_timing">Remote</div>•
-                                    <div className="job-pay">30-50k</div>
-                                </div>
-                                <a href="/" className="cta">
-                                    Apply For This Job
-                                </a>
-                            </div>
-                        </div>
-                        <div className="job">
-                            <div className="job_title">UX Writer</div>
-                            <div className="job_des">
-                                Lorem, ipsum dolor sit amet consectetur
-                                adipisicing elit. Quia nulla voluptatibus
-                                aspernatur autem architecto deleniti. Lorem
-                                ipsum dolor, sit amet consectetur adipisicing
-                                elit. Inventore sit est error quam eos veritatis
-                                laudantium non, ipsam nulla repellendus
-                                architecto qui dolor minus delectus.
-                            </div>
-                            <div className="job_options">
-                                <div className="jobs_details">
-                                    <div className="job_type">Fulltime</div>•
-                                    <div className="job_timing">Remote</div>•
-                                    <div className="job-pay">30-50k</div>
-                                </div>
-                                <a href="/" className="cta">
-                                    Apply For This Job
-                                </a>
-                            </div>
-                        </div>
-                        <div className="job">
-                            <div className="job_title">UX Writer</div>
-                            <div className="job_des">
-                                Lorem, ipsum dolor sit amet consectetur
-                                adipisicing elit. Quia nulla voluptatibus
-                                aspernatur autem architecto deleniti. Lorem
-                                ipsum dolor, sit amet consectetur adipisicing
-                                elit. Inventore sit est error quam eos veritatis
-                                laudantium non, ipsam nulla repellendus
-                                architecto qui dolor minus delectus.
-                            </div>
-                            <div className="job_options">
-                                <div className="jobs_details">
-                                    <div className="job_type">Fulltime</div>•
-                                    <div className="job_timing">Remote</div>•
-                                    <div className="job-pay">30-50k</div>
-                                </div>
-                                <a href="/" className="cta">
-                                    Apply For This Job
-                                </a>
-                            </div>
-                        </div>
-                        <div className="job">
-                            <div className="job_title">UX Writer</div>
-                            <div className="job_des">
-                                Lorem, ipsum dolor sit amet consectetur
-                                adipisicing elit. Quia nulla voluptatibus
-                                aspernatur autem architecto deleniti. Lorem
-                                ipsum dolor, sit amet consectetur adipisicing
-                                elit. Inventore sit est error quam eos veritatis
-                                laudantium non, ipsam nulla repellendus
-                                architecto qui dolor minus delectus.
-                            </div>
-                            <div className="job_options">
-                                <div className="jobs_details">
-                                    <div className="job_type">Fulltime</div>•
-                                    <div className="job_timing">Remote</div>•
-                                    <div className="job-pay">30-50k</div>
-                                </div>
-                                <a href="/" className="cta">
-                                    Apply For This Job
-                                </a>
-                            </div>
-                        </div>
-                        <div className="job">
-                            <div className="job_title">UX Writer</div>
-                            <div className="job_des">
-                                Lorem, ipsum dolor sit amet consectetur
-                                adipisicing elit. Quia nulla voluptatibus
-                                aspernatur autem architecto deleniti. Lorem
-                                ipsum dolor, sit amet consectetur adipisicing
-                                elit. Inventore sit est error quam eos veritatis
-                                laudantium non, ipsam nulla repellendus
-                                architecto qui dolor minus delectus.
-                            </div>
-                            <div className="job_options">
-                                <div className="jobs_details">
-                                    <div className="job_type">Fulltime</div>•
-                                    <div className="job_timing">Remote</div>•
-                                    <div className="job-pay">30-50k</div>
-                                </div>
-                                <a href="/" className="cta">
-                                    Apply For This Job
-                                </a>
-                            </div>
-                        </div>
-                        <div className="job">
-                            <div className="job_title">UX Writer</div>
-                            <div className="job_des">
-                                Lorem, ipsum dolor sit amet consectetur
-                                adipisicing elit. Quia nulla voluptatibus
-                                aspernatur autem architecto deleniti. Lorem
-                                ipsum dolor, sit amet consectetur adipisicing
-                                elit. Inventore sit est error quam eos veritatis
-                                laudantium non, ipsam nulla repellendus
-                                architecto qui dolor minus delectus.
-                            </div>
-                            <div className="job_options">
-                                <div className="jobs_details">
-                                    <div className="job_type">Fulltime</div>•
-                                    <div className="job_timing">Remote</div>•
-                                    <div className="job-pay">30-50k</div>
-                                </div>
-                                <a href="/" className="cta">
-                                    Apply For This Job
-                                </a>
-                            </div>
-                        </div>
-                        <div className="job">
-                            <div className="job_title">UX Writer</div>
-                            <div className="job_des">
-                                Lorem, ipsum dolor sit amet consectetur
-                                adipisicing elit. Quia nulla voluptatibus
-                                aspernatur autem architecto deleniti. Lorem
-                                ipsum dolor, sit amet consectetur adipisicing
-                                elit. Inventore sit est error quam eos veritatis
-                                laudantium non, ipsam nulla repellendus
-                                architecto qui dolor minus delectus.
-                            </div>
-                            <div className="job_options">
-                                <div className="jobs_details">
-                                    <div className="job_type">Fulltime</div>•
-                                    <div className="job_timing">Remote</div>•
-                                    <div className="job-pay">30-50k</div>
-                                </div>
-                                <a href="/" className="cta">
-                                    Apply For This Job
-                                </a>
-                            </div>
-                        </div>
+                    <div className="p1" style={{ marginTop: 2 + "rem" }}>
+                        Sorry, There are no jobs at the moment.
                     </div>
+                    <div className="p1">
+                        For Further details{" "}
+                        <Link to="/contact" className="p1">
+                            Contact Us
+                        </Link>
+                    </div>
+                    {/* <div className="jobs">
+                        <div className="job">
+                            <div className="job_title">UX Writer</div>
+                            <div className="job_des">
+                                Lorem, ipsum dolor sit amet consectetur
+                                adipisicing elit. Quia nulla voluptatibus
+                                aspernatur autem architecto deleniti. Lorem
+                                ipsum dolor, sit amet consectetur adipisicing
+                                elit. Inventore sit est error quam eos veritatis
+                                laudantium non, ipsam nulla repellendus
+                                architecto qui dolor minus delectus.
+                            </div>
+                            <div className="job_options">
+                                <div className="jobs_details">
+                                    <div className="job_type">Fulltime</div>•
+                                    <div className="job_timing">Remote</div>•
+                                    <div className="job-pay">30-50k</div>
+                                </div>
+                                <a href="/" className="cta">
+                                    Apply For This Job
+                                </a>
+                            </div>
+                        </div>
+                    </div> */}
                 </div>
             </div>
         </Container>
@@ -202,6 +80,10 @@ const Container = styled.section`
                 font-weight: 600;
                 padding-bottom: 0.5rem;
                 border-bottom: 1px solid;
+            }
+
+            a {
+                text-decoration: underline;
             }
 
             .jobs {

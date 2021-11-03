@@ -52,14 +52,14 @@ const MeetOurTeam = () => {
 const Container = styled.section`
     margin-top: 70px;
 
-    background-color: #f7f7ff;
+    background: hsl(0, 0%, 100%, 0.9);
     border: 1px solid black;
     display: flex;
     flex-direction: column;
     align-items: center;
+    color: hsl(187, 100%, 12%);
     .team_members {
         max-width: 1440px;
-        color: black;
         letter-spacing: 1px;
 
         display: flex;
@@ -75,11 +75,10 @@ const Container = styled.section`
                 gap: 1rem;
 
                 .title {
-                    color: black;
                 }
             }
             .section-des {
-                color: #84829e;
+                /* color: #84829e; */
                 line-height: 1.2;
                 font-size: 0.8rem;
             }
@@ -118,7 +117,6 @@ const Container = styled.section`
                 }
 
                 .member-post {
-                    color: #4339a8;
                     font-weight: 500;
                 }
 
@@ -134,8 +132,10 @@ const Container = styled.section`
 
     @media (min-width: 500px) {
         .team_members {
+            gap: 2rem;
             .right-col {
-                // border: 1px solid;
+                margin-top: 1.4rem;
+                /* border: 1px solid; */
                 width: 100% !important;
                 display: grid;
                 grid-template-columns: 1fr 1fr !important;
