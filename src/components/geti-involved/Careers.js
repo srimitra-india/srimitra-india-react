@@ -176,7 +176,7 @@ const Careers = () => {
 };
 
 const Container = styled.section`
-    margin-top: 75px;
+    margin-top: 70px;
     color: hsl(187, 100%, 18%);
     max-width: 1440px;
     width: 100%;
@@ -226,8 +226,10 @@ const Container = styled.section`
 
                     .job_options {
                         display: flex;
+                        flex-direction: column;
                         justify-content: space-between;
-                        align-items: flex-end;
+                        align-items: flex-start;
+                        gap: 0.5rem;
                     }
                     .jobs_details {
                         display: flex;
@@ -287,8 +289,9 @@ const Container = styled.section`
 
                 .job_options {
                     display: flex;
+                    flex-direction: row !important;
                     justify-content: space-between;
-                    align-items: flex-end;
+                    align-items: center !important;
                 }
                 .jobs_details {
                     display: flex;

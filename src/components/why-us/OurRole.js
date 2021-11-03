@@ -69,7 +69,7 @@ const OurRole = () => {
 const Container = styled.section`
     background: hsla(0, 0%, 100%, 0.9);
     /* background: white; */
-    margin-top: 75px;
+    margin-top: 70px;
     display: flex;
     align-items: center;
     flex-direction: column;

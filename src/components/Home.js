@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import teamMemberData from "../data/teamMembers";
-import testimonialsData from "../data/tesstimonials";
+// import testimonialsData from "../data/tesstimonials";
 import Faq from "./misc-components/Faq";
 import { Link } from "react-router-dom";
 
@@ -134,7 +134,7 @@ const Home = () => {
                     </div>
                 </div>
             </section>
-            <section className="testimonials-section">
+            {/* <section className="testimonials-section">
                 <div className="title-section">
                     <h3 className="title">Testimonials</h3>
                     <div className="p2">What our clients has to say.</div>
@@ -173,7 +173,7 @@ const Home = () => {
                         <div className="testimonial null-div"></div>
                     </div>
                 </div>
-            </section>
+            </section> */}
             <Faq />
         </Container>
     );
@@ -211,6 +211,7 @@ const Container = styled.div`
             justify-content: center;
             align-items: flex-start;
             gap: 1rem;
+            line-height: 1;
 
             .cta-container {
                 display: flex;

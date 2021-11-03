@@ -5,12 +5,6 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 const Nav = () => {
-    // Navbar
-    // console.log("helllo");
-    // const navlink = document.querySelector("#navLink");
-    // const navicon = document.querySelector("#navIcon");
-    // const navbar = document.querySelector("#navbar");
-
     const [showMenu, setShowmenu] = useState(false);
 
     let menu;
@@ -159,7 +153,13 @@ const Nav = () => {
             <>
                 <ul className="mobile nav-link nav-open" id="navLink">
                     <li className="link-grp">
-                        <Link to="/" className="links-grp-heading">
+                        <Link
+                            to="/"
+                            className="links-grp-heading"
+                            onClick={() => {
+                                setShowmenu(!showMenu);
+                            }}
+                        >
                             Home
                         </Link>
                     </li>
@@ -172,17 +172,32 @@ const Nav = () => {
                         <div className="sub-section">
                             <ul>
                                 <li>
-                                    <Link to="/about-us/vision-mission">
+                                    <Link
+                                        to="/about-us/vision-mission"
+                                        onClick={() => {
+                                            setShowmenu(!showMenu);
+                                        }}
+                                    >
                                         Vision Mission
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link to="/about-us/knowing-srimitra">
+                                    <Link
+                                        to="/about-us/knowing-srimitra"
+                                        onClick={() => {
+                                            setShowmenu(!showMenu);
+                                        }}
+                                    >
                                         Knowing SriMitra
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link to="/about-us/our-team">
+                                    <Link
+                                        to="/about-us/our-team"
+                                        onClick={() => {
+                                            setShowmenu(!showMenu);
+                                        }}
+                                    >
                                         Meet Our Team
                                     </Link>
                                 </li>
@@ -198,15 +213,32 @@ const Nav = () => {
                         <div className="sub-section">
                             <ul>
                                 <li>
-                                    <Link to="/why-us/our-role">Our Role</Link>
+                                    <Link
+                                        to="/why-us/our-role"
+                                        onClick={() => {
+                                            setShowmenu(!showMenu);
+                                        }}
+                                    >
+                                        Our Role
+                                    </Link>
                                 </li>
                                 <li>
-                                    <Link to="/why-us/our-reach">
+                                    <Link
+                                        to="/why-us/our-reach"
+                                        onClick={() => {
+                                            setShowmenu(!showMenu);
+                                        }}
+                                    >
                                         Our Reach
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link to="/why-us/our-impact">
+                                    <Link
+                                        to="/why-us/our-impact"
+                                        onClick={() => {
+                                            setShowmenu(!showMenu);
+                                        }}
+                                    >
                                         Our Impact
                                     </Link>
                                 </li>
@@ -222,17 +254,32 @@ const Nav = () => {
                         <div className="sub-section">
                             <ul>
                                 <li>
-                                    <Link to="/get-involved/careers">
+                                    <Link
+                                        to="/get-involved/careers"
+                                        onClick={() => {
+                                            setShowmenu(!showMenu);
+                                        }}
+                                    >
                                         Careers
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link to="/get-involved/volunteer-with-an-orphanage">
+                                    <Link
+                                        to="/get-involved/volunteer-with-an-orphanage"
+                                        onClick={() => {
+                                            setShowmenu(!showMenu);
+                                        }}
+                                    >
                                         Volunteer
                                     </Link>
                                 </li>
                                 <li className="sub-links-grp">
-                                    <div className="sub-links-grp-heading">
+                                    <div
+                                        className="sub-links-grp-heading"
+                                        onClick={() => {
+                                            setShowmenu(!showMenu);
+                                        }}
+                                    >
                                         Partner With Us
                                         <img
                                             src="/images/drop-down.svg"
@@ -240,10 +287,20 @@ const Nav = () => {
                                         />
                                     </div>
                                     <div className="sub-sub-links">
-                                        <Link to="/get-involved/grocery-stores">
+                                        <Link
+                                            to="/get-involved/grocery-stores"
+                                            onClick={() => {
+                                                setShowmenu(!showMenu);
+                                            }}
+                                        >
                                             Grocery Stores
                                         </Link>
-                                        <Link to="/get-involved/orphanages">
+                                        <Link
+                                            to="/get-involved/orphanages"
+                                            onClick={() => {
+                                                setShowmenu(!showMenu);
+                                            }}
+                                        >
                                             Orphanages
                                         </Link>
                                     </div>
@@ -260,17 +317,32 @@ const Nav = () => {
                         <div className="sub-section">
                             <ul>
                                 <li>
-                                    <Link to="/share-responsibility/care-karo-share-karo">
+                                    <Link
+                                        to="/share-responsibility/care-karo-share-karo"
+                                        onClick={() => {
+                                            setShowmenu(!showMenu);
+                                        }}
+                                    >
                                         Care Karo Share Karo
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link to="/share-responsibility/give-a-gift">
+                                    <Link
+                                        to="/share-responsibility/give-a-gift"
+                                        onClick={() => {
+                                            setShowmenu(!showMenu);
+                                        }}
+                                    >
                                         Give a Gift
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link to="/share-responsibility/plan-an-event">
+                                    <Link
+                                        to="/share-responsibility/plan-an-event"
+                                        onClick={() => {
+                                            setShowmenu(!showMenu);
+                                        }}
+                                    >
                                         Plan An Event
                                     </Link>
                                 </li>
@@ -286,13 +358,32 @@ const Nav = () => {
                         <div className="sub-section">
                             <ul>
                                 <li>
-                                    <Link to="/recources/blog">Blog</Link>
+                                    <Link
+                                        to="/recources/blog"
+                                        onClick={() => {
+                                            setShowmenu(!showMenu);
+                                        }}
+                                    >
+                                        Blog
+                                    </Link>
                                 </li>
                                 <li>
-                                    <Link to="/recources/faq">FAQ</Link>
+                                    <Link
+                                        to="/recources/faq"
+                                        onClick={() => {
+                                            setShowmenu(!showMenu);
+                                        }}
+                                    >
+                                        FAQ
+                                    </Link>
                                 </li>
                                 <li>
-                                    <Link to="/recources/tax-benefits">
+                                    <Link
+                                        to="/recources/tax-benefits"
+                                        onClick={() => {
+                                            setShowmenu(!showMenu);
+                                        }}
+                                    >
                                         Know About Tax Benefits
                                     </Link>
                                 </li>
@@ -300,7 +391,13 @@ const Nav = () => {
                         </div>
                     </li>
 
-                    <Link to="/contact" className="links-grp-heading cta">
+                    <Link
+                        to="/contact"
+                        className="links-grp-heading cta"
+                        onClick={() => {
+                            setShowmenu(!showMenu);
+                        }}
+                    >
                         Contact Us
                     </Link>
                 </ul>
@@ -455,7 +552,7 @@ const Container = styled.div`
                             flex-direction: column;
                             align-items: center;
                             a {
-                                font-size: 0.8rem !important;
+                                font-size: 1rem !important;
                             }
                             width: 100%;
                         }

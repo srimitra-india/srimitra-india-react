@@ -50,7 +50,7 @@ const MeetOurTeam = () => {
 };
 
 const Container = styled.section`
-    margin-top: 75px;
+    margin-top: 70px;
 
     background-color: #f7f7ff;
     border: 1px solid black;

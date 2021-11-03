@@ -1,6 +1,8 @@
 import React from "react";
 import { Route } from "react-router";
 import styled from "styled-components";
+import OurImpact from "./why-us/OurImpact";
+import OurReach from "./why-us/OurReach";
 import OurRole from "./why-us/OurRole";
 
 const WhyUs = () => {
@@ -10,10 +12,10 @@ const WhyUs = () => {
                 <OurRole />
             </Route>
             <Route path="/why-us/our-reach">
-                <div>reach</div>
+                <OurReach />
             </Route>
             <Route path="/why-us/our-impact">
-                <div>team</div>
+                <OurImpact />
             </Route>
         </Container>
     );

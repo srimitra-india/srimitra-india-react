@@ -1,6 +1,6 @@
 const teamMemberData = [
     {
-        memberPhoto: "/images/TeamMembers/male_memoji.png",
+        memberPhoto: "/images/TeamMembers/female_memoji.png",
         memberPhotoReal: "/images/TeamMembers/female-img.png",
         memberName: "Reshma Singh",
         memberPost: "Founder",
