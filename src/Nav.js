@@ -7,12 +7,19 @@ import styled from "styled-components";
 const Nav = () => {
     const [showMenu, setShowmenu] = useState(false);
 
+    const goUp = () => {
+        window.scroll({
+            top: 0,
+            left: 0,
+        });
+    };
+
     let menu;
 
     const desktopMenu = (
         <ul className="desktop-menu nav-link nav-open" id="navLink">
             <li className="link-grp">
-                <Link to="/" className="links-grp-heading">
+                <Link to="/" className="links-grp-heading" onClick={goUp}>
                     Home
                 </Link>
             </li>
@@ -25,17 +32,22 @@ const Nav = () => {
                 <div className="sub-section">
                     <ul>
                         <li>
-                            <Link to="/about-us/vision-mission">
+                            <Link to="/about-us/vision-mission" onClick={goUp}>
                                 Vision Mission
                             </Link>
                         </li>
                         <li>
-                            <Link to="/about-us/knowing-srimitra">
+                            <Link
+                                to="/about-us/knowing-srimitra"
+                                onClick={goUp}
+                            >
                                 Knowing SriMitra
                             </Link>
                         </li>
                         <li>
-                            <Link to="/about-us/our-team">Meet Our Team</Link>
+                            <Link to="/about-us/our-team" onClick={goUp}>
+                                Meet Our Team
+                            </Link>
                         </li>
                     </ul>
                 </div>
@@ -49,13 +61,19 @@ const Nav = () => {
                 <div className="sub-section">
                     <ul>
                         <li>
-                            <Link to="/why-us/our-role">Our Role</Link>
+                            <Link to="/why-us/our-role" onClick={goUp}>
+                                Our Role
+                            </Link>
                         </li>
                         <li>
-                            <Link to="/why-us/our-reach">Our Reach</Link>
+                            <Link to="/why-us/our-reach" onClick={goUp}>
+                                Our Reach
+                            </Link>
                         </li>
                         <li>
-                            <Link to="/why-us/our-impact">Our Impact</Link>
+                            <Link to="/why-us/our-impact" onClick={goUp}>
+                                Our Impact
+                            </Link>
                         </li>
                     </ul>
                 </div>
@@ -69,10 +87,15 @@ const Nav = () => {
                 <div className="sub-section">
                     <ul>
                         <li>
-                            <Link to="/get-involved/careers">Careers</Link>
+                            <Link to="/get-involved/careers" onClick={goUp}>
+                                Careers
+                            </Link>
                         </li>
                         <li>
-                            <Link to="/get-involved/volunteer-with-an-orphanage">
+                            <Link
+                                to="/get-involved/volunteer-with-an-orphanage"
+                                onClick={goUp}
+                            >
                                 Volunteer
                             </Link>
                         </li>
@@ -82,10 +105,16 @@ const Nav = () => {
                                 <img src="/images/drop-down.svg" alt="" />
                             </div>
                             <div className="sub-sub-links">
-                                <Link to="/get-involved/grocery-stores">
+                                <Link
+                                    to="/get-involved/grocery-stores"
+                                    onClick={goUp}
+                                >
                                     Grocery Stores
                                 </Link>
-                                <Link to="/get-involved/orphanages">
+                                <Link
+                                    to="/get-involved/orphanages"
+                                    onClick={goUp}
+                                >
                                     Orphanages
                                 </Link>
                             </div>
@@ -102,17 +131,26 @@ const Nav = () => {
                 <div className="sub-section">
                     <ul>
                         <li>
-                            <Link to="/share-responsibility/care-karo-share-karo">
+                            <Link
+                                to="/share-responsibility/care-karo-share-karo"
+                                onClick={goUp}
+                            >
                                 Care Karo Share Karo
                             </Link>
                         </li>
                         <li>
-                            <Link to="/share-responsibility/give-a-gift">
+                            <Link
+                                to="/share-responsibility/give-a-gift"
+                                onClick={goUp}
+                            >
                                 Give a Gift
                             </Link>
                         </li>
                         <li>
-                            <Link to="/share-responsibility/plan-an-event">
+                            <Link
+                                to="/share-responsibility/plan-an-event"
+                                onClick={goUp}
+                            >
                                 Plan An Event
                             </Link>
                         </li>
@@ -128,13 +166,17 @@ const Nav = () => {
                 <div className="sub-section">
                     <ul>
                         <li>
-                            <Link to="/recources/blog">Blog</Link>
+                            <Link to="/recources/blog" onClick={goUp}>
+                                Blog
+                            </Link>
                         </li>
                         <li>
-                            <Link to="/recources/faq">FAQ</Link>
+                            <Link to="/recources/faq" onClick={goUp}>
+                                FAQ
+                            </Link>
                         </li>
                         <li>
-                            <Link to="/recources/tax-benefits">
+                            <Link to="/recources/tax-benefits" onClick={goUp}>
                                 Know About Tax Benefits
                             </Link>
                         </li>
@@ -142,7 +184,11 @@ const Nav = () => {
                 </div>
             </li>
 
-            <Link to="/contact" className="links-grp-heading cta">
+            <Link
+                to="/contact"
+                className="links-grp-heading cta"
+                onClick={goUp}
+            >
                 Contact Us
             </Link>
         </ul>
@@ -610,7 +656,7 @@ const Container = styled.div`
         }
     }
 
-    @media only screen and (min-width: 1359px) {
+    @media only screen and (min-width: 1259px) {
         & {
         }
         .desktop-menu {
@@ -656,7 +702,7 @@ const Container = styled.div`
             .nav-link {
                 display: flex;
                 flex-direction: row;
-                gap: 2rem;
+                gap: 1.5rem;
                 align-items: center;
                 font-weight: 400;
                 letter-spacing: 2px;
@@ -688,6 +734,8 @@ const Container = styled.div`
                         cursor: pointer;
                         display: flex;
                         align-items: center;
+                        /* border: 1px solid; */
+                        font-size: 0.9rem;
 
                         img {
                             transition: all 150ms ease-in-out;

@@ -3,6 +3,13 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 const Footer = () => {
+    const goUp = () => {
+        window.scroll({
+            top: 0,
+            left: 0,
+        });
+    };
+
     return (
         <Container>
             <section className="footer">
@@ -17,30 +24,48 @@ const Footer = () => {
                     <div className="left-links-box links-box">
                         <div className="link-box">
                             <p className="link-heading">About Us</p>
-                            <Link to="/about-us/vision-mission">
+                            <Link to="/about-us/vision-mission" onClick={goUp}>
                                 Vision Mission
                             </Link>
-                            <Link to="/about-us/knowing-srimitra">
+                            <Link
+                                to="/about-us/knowing-srimitra"
+                                onClick={goUp}
+                            >
                                 Knowing SriMitra
                             </Link>
-                            <Link to="/about-us/our-team">Meet Our Team</Link>
+                            <Link to="/about-us/our-team" onClick={goUp}>
+                                Meet Our Team
+                            </Link>
                             <p className="p3">
                                 Resources -
-                                <Link to="/recources/blog">Blog</Link> /
-                                <Link to="/recources/faq">FAQ</Link>
+                                <Link to="/recources/blog" onClick={goUp}>
+                                    Blog
+                                </Link>{" "}
+                                /
+                                <Link to="/recources/faq" onClick={goUp}>
+                                    FAQ
+                                </Link>
                             </p>
                         </div>
 
                         <div className="link-box">
                             <p className="link-heading">Get Involved</p>
-                            <Link to="/get-inlvolved/careers">Careers</Link>
-                            <Link to="/get-inlvolved/volunteer-with-an-orphanage">
+                            <Link to="/get-involved/careers" onClick={goUp}>
+                                Careers
+                            </Link>
+                            <Link
+                                to="/get-involved/volunteer-with-an-orphanage"
+                                onClick={goUp}
+                            >
                                 Volunteer
                             </Link>
-                            <Link to="/get-inlvolved/grocery-stores">
+                            <Link
+                                to="/get-involved/grocery-stores"
+                                onClick={goUp}
+                            >
                                 Partner With Grocery Stores
                             </Link>
-                            <Link to="/get-inlvolved/orphanages">
+                            <Link to="/get-involved/orphanages" onClick={goUp}>
                                 Partner With Orphanages
                             </Link>
                         </div>
@@ -48,20 +73,35 @@ const Footer = () => {
                     <div className="right-links-box links-box">
                         <div className="link-box">
                             <p className="link-heading">Why Us</p>
-                            <Link to="/why-us/our-role">Our Role</Link>
-                            <Link to="/why-us/our-reach">Our Reach</Link>
-                            <Link to="/why-us/our-impact">Our Impact</Link>
+                            <Link to="/why-us/our-role" onClick={goUp}>
+                                Our Role
+                            </Link>
+                            <Link to="/why-us/our-reach" onClick={goUp}>
+                                Our Reach
+                            </Link>
+                            <Link to="/why-us/our-impact" onClick={goUp}>
+                                Our Impact
+                            </Link>
                         </div>
 
                         <div className="link-box">
                             <p className="link-heading">Share Responsibility</p>
-                            <Link to="/share-responsibility/care-karo-share-karo">
+                            <Link
+                                to="/share-responsibility/care-karo-share-karo"
+                                onClick={goUp}
+                            >
                                 Care Karo Share Karo
                             </Link>
-                            <Link to="/share-responsibility/give-a-gift">
+                            <Link
+                                to="/share-responsibility/give-a-gift"
+                                onClick={goUp}
+                            >
                                 Give a Gift
                             </Link>
-                            <Link to="/share-responsibility/plan-an-event">
+                            <Link
+                                to="/share-responsibility/plan-an-event"
+                                onClick={goUp}
+                            >
                                 Plan An Event
                             </Link>
                         </div>

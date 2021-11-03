@@ -106,30 +106,29 @@ const Home = () => {
                         <div className="members">
                             {teamMemberData &&
                                 teamMemberData.map((member, key) => (
-                                    <>
-                                        <div className="member" key={key}>
-                                            <div className="member-detail">
-                                                <img
-                                                    className="member-photo"
-                                                    src={member.memberPhoto}
-                                                    alt=""
-                                                    srcSet=""
-                                                />
-                                                <div className="name-post">
-                                                    <p className="p1 member-name">
-                                                        {member.memberName}
-                                                    </p>
-                                                    <p className="p2 member-post">
-                                                        {member.memberPost}
-                                                    </p>
-                                                </div>
+                                    <div className="member" key={key}>
+                                        <div className="member-detail">
+                                            <img
+                                                className="member-photo"
+                                                src={member.memberPhoto}
+                                                alt=""
+                                                srcSet=""
+                                            />
+                                            <div className="name-post">
+                                                <p className="p1 member-name">
+                                                    {member.memberName}
+                                                </p>
+                                                <p className="p2 member-post">
+                                                    {member.memberPost}
+                                                </p>
                                             </div>
-                                            <p className="p3 member-description">
-                                                {member.memberDescription}
-                                            </p>
                                         </div>
-                                    </>
+                                        <p className="p3 member-description">
+                                            {member.memberDescription}
+                                        </p>
+                                    </div>
                                 ))}
+                            <div className="null-div"></div>
                         </div>
                     </div>
                 </div>
@@ -474,7 +473,8 @@ const Container = styled.div`
             }
 
             .null-div {
-                width: 1px;
+                border: 1px solid;
+                /* width: 10px; */
                 height: 1px;
                 padding: 0;
                 opacity: 0;
