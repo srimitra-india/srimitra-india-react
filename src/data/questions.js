@@ -18,7 +18,7 @@ const faqQues = [
     {
         ques: "Can I cancel my order and get a refund?",
         ansType: "text",
-        answer: "We are sorry about being a one way street,but once an order is placed it cannot be canceled.",
+        answer: "We are sorry about being a one way street,but once an order is placed it cannot be cancelled.",
     },
     {
         ques: "How can I partner with SriMitra?",
@@ -26,8 +26,12 @@ const faqQues = [
         answer: "Please refer to the given links for more information:",
         links: [
             {
-                add: "/contact",
-                name: "Contact Us",
+                add: "/get-involved/grocery-stores",
+                name: "With Grocery Stores",
+            },
+            {
+                add: "/get-involved/orphanages",
+                name: "With Orphanges",
             },
         ],
     },
@@ -48,9 +52,9 @@ const faqQues = [
         answer: "As we believe we donate with our emotions using money as a medium. But in the interest of Fulfillment of Logistics, we encourage you for order of INR 500.",
     },
     {
-        ques: "Are you a registered body ?",
+        ques: "Are you a registered body?",
         ansType: "text",
-        answer: "We have a Private Limited Company working as an accelerator platform for the social cause.",
+        answer: "We are a Private Limited Company working as an accelerator platform for the social cause.",
     },
     {
         ques: "Do you take money directly as a contribution?",
@@ -74,7 +78,7 @@ const faqQues = [
         answer: "Please follow the given link for further details:",
         links: [
             {
-                add: "/get-inlvolved/volunteer-with-an-orphanage",
+                add: "/get-involved/volunteer",
                 name: "Volunteer",
             },
         ],
@@ -85,7 +89,7 @@ const faqQues = [
         answer: "Please follow the given link for further details:",
         links: [
             {
-                add: "/get-inlvolved/careers",
+                add: "/get-involved/careers",
                 name: "Careers",
             },
         ],
@@ -98,17 +102,6 @@ const faqQues = [
             {
                 add: "/recources/tax-benefits",
                 name: "Tax Benefits",
-            },
-        ],
-    },
-    {
-        ques: "How can I partner with SriMitra?",
-        ansType: "link",
-        answer: "Please refer to the given links for more information:",
-        links: [
-            {
-                add: "/contact",
-                name: "Contact Us",
             },
         ],
     },

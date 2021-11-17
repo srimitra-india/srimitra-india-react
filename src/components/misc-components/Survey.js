@@ -64,7 +64,7 @@ const Survey = () => {
                     method="POST"
                 >
                     <div className="input-box">
-                        <label className="label p2" for="name">
+                        <label className="label p2" htmlFor="name">
                             Name
                         </label>
                         <input
@@ -77,7 +77,7 @@ const Survey = () => {
                         />
                     </div>
                     <div className="input-box">
-                        <p className="p p2" for="age">
+                        <p className="p p2" htmlFor="age">
                             Age
                         </p>
 
@@ -90,7 +90,7 @@ const Survey = () => {
                                     value="12 - 18"
                                     onChange={(e) => setAge(e.target.value)}
                                 />
-                                <label for="12 - 18">12 - 18</label>
+                                <label htmlFor="12 - 18">12 - 18</label>
                             </div>
                             <div>
                                 <input
@@ -100,7 +100,7 @@ const Survey = () => {
                                     value="19 - 30"
                                     onChange={(e) => setAge(e.target.value)}
                                 />
-                                <label for="19 - 30">19 - 30</label>
+                                <label htmlFor="19 - 30">19 - 30</label>
                             </div>
                             <div>
                                 <input
@@ -110,7 +110,7 @@ const Survey = () => {
                                     value="31 - 40"
                                     onChange={(e) => setAge(e.target.value)}
                                 />
-                                <label for="31 - 40">31 - 40</label>
+                                <label htmlFor="31 - 40">31 - 40</label>
                             </div>
                             <div>
                                 <input
@@ -120,7 +120,7 @@ const Survey = () => {
                                     value="41 - 50"
                                     onChange={(e) => setAge(e.target.value)}
                                 />
-                                <label for="41 - 50">41 - 50</label>
+                                <label htmlFor="41 - 50">41 - 50</label>
                             </div>
                             <div>
                                 <input
@@ -130,7 +130,7 @@ const Survey = () => {
                                     value="51 - 60"
                                     onChange={(e) => setAge(e.target.value)}
                                 />
-                                <label for="51 - 60">51 - 60</label>
+                                <label htmlFor="51 - 60">51 - 60</label>
                             </div>
                             <div>
                                 <input
@@ -140,7 +140,7 @@ const Survey = () => {
                                     value="61 - 70"
                                     onChange={(e) => setAge(e.target.value)}
                                 />
-                                <label for="61 - 70">61 - 70</label>
+                                <label htmlFor="61 - 70">61 - 70</label>
                             </div>
                             <div>
                                 <input
@@ -150,29 +150,30 @@ const Survey = () => {
                                     value="Above 70"
                                     onChange={(e) => setAge(e.target.value)}
                                 />
-                                <label for="Above 70">Above 70</label>
+                                <label htmlFor="Above 70">Above 70</label>
                             </div>
                         </div>
                     </div>
 
                     <div className="input-box">
-                        <label for="profession">Profession</label>
+                        <label htmlFor="profession">Profession</label>
                         <select
                             name="profession"
                             id="profession"
                             onChange={(e) => setProfession(e.target.value)}
                         >
-                            <option value="Salaried">Salaried</option>
                             <option value="Self Employed">Self Employed</option>
+                            <option selected value="Salaried">
+                                Salaried
+                            </option>
                             <option value="Student">Student</option>
                             <option value="Home Maker">Home Maker</option>
                         </select>
                     </div>
 
                     <div className="input-box">
-                        <label for="reason-of-no-trust">
-                            Why do you not trust donation platforms or
-                            organizations?
+                        <label htmlFor="reason-of-no-trust">
+                            Reason you don't trust donation platforms?
                         </label>
                         <select
                             name="reason-of-no-trust"
@@ -190,8 +191,8 @@ const Survey = () => {
                     </div>
 
                     <div className="input-box">
-                        <label for="reason-of-not-donating">
-                            Why do you not donate?
+                        <label htmlFor="reason-of-not-donating">
+                            Reason you don't donate?
                         </label>
                         <select
                             name="reason-of-not-donating"
@@ -213,9 +214,10 @@ const Survey = () => {
                     </div>
 
                     <div className="input-box">
-                        <label for="likelines-for-mobile-app">
+                        <label htmlFor="likelines-for-mobile-app">
                             How likely are you to adopt an easy convenient
-                            mobile app like SriMitra for donation?
+                            mobile app like SriMitra for donation? ( 5 Being the
+                            most likely )
                         </label>
 
                         <div className="radio-buttons">
@@ -229,7 +231,7 @@ const Survey = () => {
                                         setMobileApp(e.target.value)
                                     }
                                 />
-                                <label for="1">1</label>
+                                <label htmlFor="1">1</label>
                             </div>
                             <div>
                                 <input
@@ -241,7 +243,7 @@ const Survey = () => {
                                         setMobileApp(e.target.value)
                                     }
                                 />
-                                <label for="2">2</label>
+                                <label htmlFor="2">2</label>
                             </div>
                             <div>
                                 <input
@@ -253,7 +255,7 @@ const Survey = () => {
                                         setMobileApp(e.target.value)
                                     }
                                 />
-                                <label for="3">3</label>
+                                <label htmlFor="3">3</label>
                             </div>
                             <div>
                                 <input
@@ -265,7 +267,7 @@ const Survey = () => {
                                         setMobileApp(e.target.value)
                                     }
                                 />
-                                <label for="4">4</label>
+                                <label htmlFor="4">4</label>
                             </div>
                             <div>
                                 <input
@@ -277,13 +279,13 @@ const Survey = () => {
                                         setMobileApp(e.target.value)
                                     }
                                 />
-                                <label for="5">5</label>
+                                <label htmlFor="5">5</label>
                             </div>
                         </div>
                     </div>
 
                     <div className="input-box">
-                        <label for="frequency-of-donation">
+                        <label htmlFor="frequency-of-donation">
                             How frequently would you like to donate?
                         </label>
                         <select
@@ -291,16 +293,16 @@ const Survey = () => {
                             id="frequency-of-donation"
                             onChange={(e) => setFreq(e.target.value)}
                         >
-                            <option value="Weakly">Weakly</option>
+                            <option value="Weekly">Weekly</option>
                             <option value="Monthly">Monthly</option>
                             <option value="Bi-Monthly">Bi-Monthly</option>
-                            <option value="Quaterly">Quaterly</option>
+                            <option value="Quarterly">Quarterly</option>
                             <option value="Yearly">Yearly</option>
                         </select>
                     </div>
 
                     <div className="input-box">
-                        <label for="amount-for-donation">
+                        <label htmlFor="amount-for-donation">
                             How much would you prefer to donate?
                         </label>
                         <select
@@ -331,7 +333,7 @@ const Survey = () => {
     );
 };
 
-const Container = styled.div`
+const Container = styled.section`
     margin-top: 70px;
     background-color: black;
     color: #fff;
@@ -373,6 +375,7 @@ const Container = styled.div`
         flex-direction: column;
         gap: 2rem;
         width: 100%;
+        align-items: center;
     }
 
     .input-box {
@@ -396,6 +399,12 @@ const Container = styled.div`
         .radio-buttons {
             label {
                 color: white;
+            }
+            div {
+                /* border: 1px solid; */
+                display: flex;
+                align-items: center;
+                gap: 0.2rem;
             }
         }
     }
@@ -434,13 +443,21 @@ const Container = styled.div`
         border-bottom: 2px solid rgb(255, 255, 255);
     }
 
+    .cta {
+        border-radius: 0;
+        width: 100%;
+        height: 60px;
+        border-width: 1px;
+    }
+
     .button {
         cursor: pointer;
         font-size: 1rem;
         grid-column: 1/3;
-        width: 300px !important;
         background: #ffa800;
         border: none;
+        border-radius: 0.4rem;
+        width: 100%;
     }
 
     .button:hover {
@@ -461,13 +478,6 @@ const Container = styled.div`
         border-bottom: 1px solid rgba(255, 255, 255, 0.651);
     }
 
-    .cta {
-        border-radius: 0 !important;
-        width: 100%;
-        height: 60px;
-        border-width: 1px;
-    }
-
     .radio-buttons {
         // border: 1px solid;
         display: flex;
@@ -477,7 +487,7 @@ const Container = styled.div`
     }
 
     select {
-        background: white;
+        background: none;
         border: none;
         outline: none;
         border: 1px solid white;
@@ -486,6 +496,17 @@ const Container = styled.div`
         font-size: 1rem;
         font-weight: 500;
         letter-spacing: 1px;
+        border-radius: 0.2rem;
+        color: white;
+        /* background-color: red; */
+
+        option {
+            /* border: 2px solid;
+            background: hsl(40, 100%, 43%, 0.5);
+            background-color: hsl(40, 100%, 43%, 0.5); */
+            color: black;
+            padding: 0.5rem;
+        }
     }
 
     @media only screen and (min-width: 1175px) {

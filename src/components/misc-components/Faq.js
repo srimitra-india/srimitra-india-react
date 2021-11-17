@@ -82,6 +82,20 @@ const Container = styled.section`
         overflow-y: hidden;
         margin-top: -10px;
 
+        .links {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .links {
+            a {
+                text-decoration: underline;
+            }
+            a:hover {
+                color: hsl(40, 100%, 47%);
+            }
+        }
+
         .answer {
             width: 100%;
             height: max-content;
@@ -200,9 +214,12 @@ const Container = styled.section`
                     margin-top: 0 !important;
 
                     .links {
+                        display: flex;
+                        gap: 1rem;
                         margin-bottom: 0.2rem !important;
                         a {
                             border-bottom: 1px solid;
+                            text-decoration: none;
                         }
                     }
                 }

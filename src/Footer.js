@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
+import { CopyToClipboard } from "react-copy-to-clipboard";
 
 const Footer = () => {
     const goUp = () => {
@@ -10,14 +11,106 @@ const Footer = () => {
         });
     };
 
+    const text = "hello@srimitraindia.com";
+    const [isCopied, setIsCopied] = useState(false);
+
+    const onCopyText = () => {
+        setIsCopied(true);
+        setTimeout(() => {
+            setIsCopied(false);
+        }, 3000);
+    };
+
     return (
         <Container>
             <section className="footer">
                 <div className="left sub-sec">
                     <img className="logo" src="/images/Logo_full.png" alt="" />
-                    <Link to="/contact" className="links-grp-heading cta">
+                    <div className="socials">
+                        <a
+                            href="https://www.facebook.com/srimitraindia"
+                            className="link"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            <img
+                                alt="social"
+                                src="/images/socials/socials-facebook.png"
+                            />
+                            <div className="link-name p2">Facebook</div>
+                            <div className="arrow">&#8250;</div>
+                        </a>
+
+                        <a
+                            href="https://www.instagram.com/srimitra.india/"
+                            className="link"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            <img
+                                alt="social"
+                                src="/images/socials/socials-instagram.png"
+                            />
+                            <div className="link-name p2">Instagram</div>
+                            <div className="arrow">&#8250;</div>
+                        </a>
+                        <a
+                            href="https://twitter.com/SrimitraIndia"
+                            className="link"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            <img
+                                alt="social"
+                                src="/images/socials/socials-twitter.png"
+                            />
+                            <div className="link-name p2">Twitter</div>
+                            <div className="arrow">&#8250;</div>
+                        </a>
+                        <a
+                            href="https://www.linkedin.com/in/srimitra-india-265098221/"
+                            className="link"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            <img
+                                alt="social"
+                                src="/images/socials/socials-linkedin.png"
+                            />
+                            <div className="link-name p2">Linkedin</div>
+                            <div className="arrow">&#8250;</div>
+                        </a>
+
+                        <CopyToClipboard text={text} onCopy={onCopyText}>
+                            <button className="link">
+                                <img
+                                    alt="social"
+                                    src="/images/socials/socials-mail.png"
+                                />
+                                <div className="link-name p2">
+                                    {isCopied ? "Copied!" : "Copy Email"}
+                                </div>
+                                <div className="arrow">&#8250;</div>
+                            </button>
+                        </CopyToClipboard>
+
+                        <a
+                            href="https://api.whatsapp.com/send/?phone=918235950819&text&app_absent=0"
+                            className="link"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            <img
+                                alt="social"
+                                src="/images/socials/socials-whatsapp.png"
+                            />
+                            <div className="link-name p2">Whatsapp</div>
+                            <div className="arrow">&#8250;</div>
+                        </a>
+                    </div>
+                    {/* <Link to="/contact" className="links-grp-heading cta">
                         Contact Us
-                    </Link>
+                    </Link> */}
                     <p className="p3">Privacy Policy | Terms and Conditions</p>
                 </div>
                 <div className="right sub-sec">
@@ -40,7 +133,7 @@ const Footer = () => {
                                 Resources -
                                 <Link to="/recources/blog" onClick={goUp}>
                                     Blog
-                                </Link>{" "}
+                                </Link>
                                 /
                                 <Link to="/recources/faq" onClick={goUp}>
                                     FAQ
@@ -123,6 +216,13 @@ const Container = styled.div`
         opacity: 0.8;
     }
 
+    button {
+        background: none;
+        border: none;
+        outline: none;
+        color: white;
+    }
+
     .footer {
         background: #000000;
         display: flex;
@@ -138,6 +238,43 @@ const Container = styled.div`
             img {
                 height: 30px;
                 width: 216px;
+            }
+        }
+
+        .socials {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            width: max-content;
+
+            .link {
+                padding-right: 0.2rem;
+                /* border: 1px solid; */
+                width: max-content;
+                display: flex;
+                gap: 0.2rem;
+                align-items: center;
+                cursor: pointer;
+
+                img {
+                    width: 35px;
+                    height: 35px;
+                }
+
+                .link-name {
+                    letter-spacing: 1px;
+                }
+
+                .arrow {
+                    opacity: 0;
+                    transition: all 150ms ease-in;
+                }
+            }
+
+            .link:hover {
+                .arrow {
+                    opacity: 1;
+                }
             }
         }
 
@@ -189,6 +326,31 @@ const Container = styled.div`
                 width: 100%;
             }
 
+            .socials {
+                display: flex;
+                flex-direction: column;
+                gap: 0.3rem !important;
+                width: max-content;
+
+                .link {
+                    padding-right: 0.2rem;
+                    /* border: 1px solid; */
+                    width: max-content;
+                    display: flex;
+                    gap: 0.3rem !important;
+                    align-items: center;
+
+                    img {
+                        width: 35px;
+                        height: 35px;
+                    }
+
+                    .link-name {
+                        letter-spacing: 1px;
+                    }
+                }
+            }
+
             .links-box {
                 display: flex;
                 flex-direction: row;
@@ -212,7 +374,7 @@ const Container = styled.div`
 
                 a {
                     /* font-weight: 300; */
-                    font-size: 1.2rem;
+                    /* font-size: 1.2rem; */
                 }
 
                 a:hover {

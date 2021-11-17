@@ -12,8 +12,11 @@ import WhyUs from "./components/WhyUs";
 import Footer from "./Footer";
 import Nav from "./Nav";
 import GetInvolved from "./components/GetInvolved";
+import ShareResp from "./components/ShareResp";
+import SinglePageBlog from "./components/resources/SinglePageBlog";
 
 function App() {
+    // let { id } = useParams();
     return (
         <div className="App">
             <BrowserRouter>
@@ -31,6 +34,9 @@ function App() {
                     <Route path="/get-involved">
                         <GetInvolved />
                     </Route>
+                    <Route path="/share-responsibility">
+                        <ShareResp />
+                    </Route>
                     <Route path="/recources">
                         <Recources />
                     </Route>
@@ -39,6 +45,9 @@ function App() {
                     </Route>
                     <Route path="/survey">
                         <Survey />
+                    </Route>
+                    <Route path="/single/:id">
+                        <SinglePageBlog />
                     </Route>
                     <Route>
                         <Error404 />

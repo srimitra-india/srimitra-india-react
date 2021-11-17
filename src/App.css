@@ -67,6 +67,7 @@ section {
   border: 2px solid white;
   width: max-content;
   letter-spacing: 1px;
+  cursor: pointer;
 }
 
 .cta-sec {
@@ -234,4 +235,8 @@ h3 {
   /* a:hover {
     opacity: 0.8;
   } */
+
+  .button {
+    max-width: 350px !important;
+  }
 }

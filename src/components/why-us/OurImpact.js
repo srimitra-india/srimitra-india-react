@@ -6,7 +6,7 @@ const OurImpact = () => {
         <Container>
             {" "}
             <div className="content">
-                <h2 className="title">OUR IPACT</h2>
+                <h2 className="title">OUR IMPACT</h2>
                 <div className="quote">
                     A heartfelt anecdote by our founder, Reshma Singh
                 </div>

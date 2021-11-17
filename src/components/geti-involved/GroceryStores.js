@@ -3,29 +3,40 @@ import { useState } from "react";
 import { useHistory } from "react-router-dom";
 import styled from "styled-components";
 
-const ContactUs = () => {
+const GroceryStores = () => {
     const history = useHistory();
-    const [name, setName] = useState("");
+
+    const [shopName, setshopName] = useState("");
+    const [adressShop, setadressShop] = useState("");
+    const [shopRegistration, setshopRegistration] = useState("");
+    const [shopGST, setshopGST] = useState("");
+    const [merchantName, setmerchantName] = useState("");
+    const [merchantPAN, setmerchantPAN] = useState("");
+    const [merchantAdhaar, setmerchantAdhaar] = useState("");
     const [email, setEmail] = useState("");
     const [phone, setPhone] = useState("");
-    const [message, setMessage] = useState("");
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        history.replace("/");
+        console.log(e.target.value);
         try {
             const res = await fetch(
-                "https://sheet.best/api/sheets/36f9895c-d200-46d7-98cc-7f13e11a140b",
+                "https://sheet.best/api/sheets/987c4f47-0902-43db-a0eb-78df5255e0be",
                 {
                     method: "POST",
                     headers: {
                         "Content-Type": "application/json",
                     },
                     body: JSON.stringify({
-                        name,
+                        shopName,
+                        adressShop,
+                        shopRegistration,
+                        shopGST,
+                        merchantName,
+                        merchantPAN,
+                        merchantAdhaar,
                         email,
                         phone,
-                        message,
                     }),
                 }
             );
@@ -35,6 +46,7 @@ const ContactUs = () => {
         } catch (err) {
             console.log(err.message);
         }
+        history.replace("/");
         e.target.reset();
     };
 
@@ -53,19 +65,110 @@ const ContactUs = () => {
                 name="contact-us"
             >
                 <div className="input-box">
-                    <label className="label p2" htmlFor="name">
-                        Name
+                    <label className="label p2" htmlFor="NameOfShop">
+                        Name Of Shop
                     </label>
                     <input
                         autoComplete="off"
                         className="input-field"
-                        id="name"
-                        placeholder="Your Name"
+                        id="NameOfShop"
+                        placeholder="Name of your shop"
                         type="text"
-                        name="Name"
-                        onChange={(e) => setName(e.target.value)}
+                        name="NameOfShop"
+                        onChange={(e) => setshopName(e.target.value)}
                     />
                 </div>
+
+                <div className="input-box">
+                    <label className="label p2" htmlFor="AddressOfShop">
+                        Address Of Shop
+                    </label>
+                    <input
+                        autoComplete="off"
+                        className="input-field"
+                        id="AddressOfShop"
+                        placeholder="Address of your shop"
+                        type="text"
+                        name="AddressOfShop"
+                        onChange={(e) => setadressShop(e.target.value)}
+                    />
+                </div>
+
+                <div className="input-box">
+                    <label className="label p2" htmlFor="ShopRegitration">
+                        Regitration Number of Shop
+                    </label>
+                    <input
+                        autoComplete="off"
+                        className="input-field"
+                        id="ShopRegitration"
+                        placeholder="Regitration Number"
+                        type="text"
+                        name="ShopPAN"
+                        onChange={(e) => setshopRegistration(e.target.value)}
+                    />
+                </div>
+
+                <div className="input-box">
+                    <label className="label p2" htmlFor="GST">
+                        GST Number of Shop
+                    </label>
+                    <input
+                        autoComplete="off"
+                        className="input-field"
+                        id="GST"
+                        placeholder="GST Number"
+                        type="text"
+                        name="GST"
+                        onChange={(e) => setshopGST(e.target.value)}
+                    />
+                </div>
+
+                <div className="input-box">
+                    <label className="label p2" htmlFor="MerchantName">
+                        Merchant Name
+                    </label>
+                    <input
+                        autoComplete="off"
+                        className="input-field"
+                        id="MerchantName"
+                        placeholder="Name of the merchant"
+                        type="text"
+                        name="MerchantName"
+                        onChange={(e) => setmerchantName(e.target.value)}
+                    />
+                </div>
+
+                <div className="input-box">
+                    <label className="label p2" htmlFor="MerchantPAN">
+                        PAN Number of Merchant
+                    </label>
+                    <input
+                        autoComplete="off"
+                        className="input-field"
+                        id="MerchantPAN"
+                        placeholder="PAN Number"
+                        type="text"
+                        name="MerchantPAN"
+                        onChange={(e) => setmerchantPAN(e.target.value)}
+                    />
+                </div>
+
+                <div className="input-box">
+                    <label className="label p2" htmlFor="MerchantAdhaar">
+                        Adhaar Number of Merchant
+                    </label>
+                    <input
+                        autoComplete="off"
+                        className="input-field"
+                        id="MerchantAdhaar"
+                        placeholder="Adhaar Number"
+                        type="text"
+                        name="MerchantAdhaar"
+                        onChange={(e) => setmerchantAdhaar(e.target.value)}
+                    />
+                </div>
+
                 <div className="input-box">
                     <label className="label p2" htmlFor="email">
                         Email
@@ -93,21 +196,6 @@ const ContactUs = () => {
                         name="Phone"
                         onChange={(e) => setPhone(e.target.value)}
                     />
-                </div>
-                <div className="input-box">
-                    <label className="label p2" htmlFor="message">
-                        Message
-                    </label>
-                    <textarea
-                        autoComplete="off"
-                        className="input-field"
-                        id="message"
-                        placeholder="Your Message"
-                        name="Message"
-                        cols="30"
-                        rows="5"
-                        onChange={(e) => setMessage(e.target.value)}
-                    ></textarea>
                 </div>
 
                 <input
@@ -312,4 +400,4 @@ const Container = styled.section`
     }
 `;
 
-export default ContactUs;
+export default GroceryStores;

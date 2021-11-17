@@ -92,10 +92,7 @@ const Nav = () => {
                             </Link>
                         </li>
                         <li>
-                            <Link
-                                to="/get-involved/volunteer-with-an-orphanage"
-                                onClick={goUp}
-                            >
+                            <Link to="/get-involved/volunteer" onClick={goUp}>
                                 Volunteer
                             </Link>
                         </li>
@@ -175,11 +172,11 @@ const Nav = () => {
                                 FAQ
                             </Link>
                         </li>
-                        <li>
+                        {/* <li>
                             <Link to="/recources/tax-benefits" onClick={goUp}>
                                 Know About Tax Benefits
                             </Link>
-                        </li>
+                        </li> */}
                     </ul>
                 </div>
             </li>
@@ -311,7 +308,7 @@ const Nav = () => {
                                 </li>
                                 <li>
                                     <Link
-                                        to="/get-involved/volunteer-with-an-orphanage"
+                                        to="/get-involved/volunteer"
                                         onClick={() => {
                                             setShowmenu(!showMenu);
                                         }}
@@ -424,14 +421,14 @@ const Nav = () => {
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link
+                                    {/* <Link
                                         to="/recources/tax-benefits"
                                         onClick={() => {
                                             setShowmenu(!showMenu);
                                         }}
                                     >
                                         Know About Tax Benefits
-                                    </Link>
+                                    </Link> */}
                                 </li>
                             </ul>
                         </div>
@@ -669,9 +666,11 @@ const Container = styled.div`
         }
 
         .navbar {
-            background: black;
+            backdrop-filter: blur(16px) saturate(180%);
+            -webkit-backdrop-filter: blur(30px) saturate(180%);
+            background-color: rgba(0, 0, 0, 0.65);
+
             color: white !important;
-            // width: 100vw;
             padding: 1rem !important;
 
             display: flex;
@@ -754,8 +753,7 @@ const Container = styled.div`
                             padding: 1rem;
                             margin-top: 3rem;
                             list-style: none;
-                            background-color: rgb(39, 39, 39);
-                            // border-radius: 0.5rem;
+
                             display: flex;
                             flex-direction: column;
                             align-items: flex-start !important;

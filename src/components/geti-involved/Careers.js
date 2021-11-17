@@ -58,6 +58,7 @@ const Container = styled.section`
     color: hsl(187, 100%, 18%);
     max-width: 1440px;
     width: 100%;
+    background: hsla(0, 0%, 100%, 0.9);
 
     .container {
         display: flex;

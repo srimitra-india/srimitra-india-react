@@ -1,21 +1,24 @@
+import styled from "styled-components";
 import React from "react";
 import { useState } from "react";
-import { useHistory } from "react-router-dom";
-import styled from "styled-components";
+import { useHistory } from "react-router";
 
-const ContactUs = () => {
+const Orphanages = () => {
     const history = useHistory();
-    const [name, setName] = useState("");
-    const [email, setEmail] = useState("");
+
+    const [name, setname] = useState("");
     const [phone, setPhone] = useState("");
-    const [message, setMessage] = useState("");
+    const [email, setEmail] = useState("");
+    const [address, setAddress] = useState("");
+    const [trustName, settrustName] = useState("");
+    const [trusteeName, settrusteeName] = useState("");
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        history.replace("/");
+        console.log(e.target.value);
         try {
             const res = await fetch(
-                "https://sheet.best/api/sheets/36f9895c-d200-46d7-98cc-7f13e11a140b",
+                "https://sheet.best/api/sheets/ece5baa1-2529-43a3-a4fc-dbb1db289c02",
                 {
                     method: "POST",
                     headers: {
@@ -23,9 +26,11 @@ const ContactUs = () => {
                     },
                     body: JSON.stringify({
                         name,
-                        email,
                         phone,
-                        message,
+                        email,
+                        address,
+                        trustName,
+                        trusteeName,
                     }),
                 }
             );
@@ -35,6 +40,7 @@ const ContactUs = () => {
         } catch (err) {
             console.log(err.message);
         }
+        history.replace("/");
         e.target.reset();
     };
 
@@ -53,19 +59,35 @@ const ContactUs = () => {
                 name="contact-us"
             >
                 <div className="input-box">
-                    <label className="label p2" htmlFor="name">
-                        Name
+                    <label className="label p2" htmlFor="NameOfOrphange">
+                        Name Of Orphanage
                     </label>
                     <input
                         autoComplete="off"
                         className="input-field"
-                        id="name"
-                        placeholder="Your Name"
+                        id="NameOfOrphange"
+                        placeholder="Name of your Orphange"
                         type="text"
-                        name="Name"
-                        onChange={(e) => setName(e.target.value)}
+                        name="NameOfOrphange"
+                        onChange={(e) => setname(e.target.value)}
                     />
                 </div>
+
+                <div className="input-box">
+                    <label className="label p2" htmlFor="mobileNumber">
+                        Mobile Number
+                    </label>
+                    <input
+                        autoComplete="off"
+                        className="input-field"
+                        id="mobileNumber"
+                        placeholder="Mobile Number"
+                        type="text"
+                        name="mobileNumber"
+                        onChange={(e) => setPhone(e.target.value)}
+                    />
+                </div>
+
                 <div className="input-box">
                     <label className="label p2" htmlFor="email">
                         Email
@@ -80,34 +102,50 @@ const ContactUs = () => {
                         onChange={(e) => setEmail(e.target.value)}
                     />
                 </div>
+
                 <div className="input-box">
-                    <label className="label p2" htmlFor="phone">
-                        Phone No.
+                    <label className="label p2" htmlFor="Address">
+                        Address
                     </label>
                     <input
                         autoComplete="off"
                         className="input-field"
-                        id="phone"
-                        placeholder="Your Phone Number"
+                        id="Address"
+                        placeholder="Address"
                         type="text"
-                        name="Phone"
-                        onChange={(e) => setPhone(e.target.value)}
+                        name="Address"
+                        onChange={(e) => setAddress(e.target.value)}
                     />
                 </div>
+
                 <div className="input-box">
-                    <label className="label p2" htmlFor="message">
-                        Message
+                    <label className="label p2" htmlFor="TrustName">
+                        Trust Name
                     </label>
-                    <textarea
+                    <input
                         autoComplete="off"
                         className="input-field"
-                        id="message"
-                        placeholder="Your Message"
-                        name="Message"
-                        cols="30"
-                        rows="5"
-                        onChange={(e) => setMessage(e.target.value)}
-                    ></textarea>
+                        id="TrustName"
+                        placeholder="Name"
+                        type="text"
+                        name="TrustName"
+                        onChange={(e) => settrustName(e.target.value)}
+                    />
+                </div>
+
+                <div className="input-box">
+                    <label className="label p2" htmlFor="TrusteeName">
+                        Trustee Name
+                    </label>
+                    <input
+                        autoComplete="off"
+                        className="input-field"
+                        id="TrusteeName"
+                        placeholder="Name"
+                        type="text"
+                        name="TrusteeName"
+                        onChange={(e) => settrusteeName(e.target.value)}
+                    />
                 </div>
 
                 <input
@@ -312,4 +350,4 @@ const Container = styled.section`
     }
 `;
 
-export default ContactUs;
+export default Orphanages;

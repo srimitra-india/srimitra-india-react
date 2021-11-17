@@ -24,9 +24,9 @@ const Home = () => {
                                 👋🏻
                             </span>
                         </Link>
-                        <Link to="/" className="cta cta-sec">
+                        {/* <Link to="/" className="cta cta-sec">
                             Explore child care centers near you
-                        </Link>
+                        </Link> */}
                     </div>
                 </div>
                 <img
@@ -275,9 +275,9 @@ const Container = styled.div`
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 1rem;
+        gap: 0rem;
         position: relative;
-        height: 214px;
+        /* height: 214px; */
         overflow: hidden;
         background: #2193b0;
         background: linear-gradient(to right, #2193b0, #6dd5ed);
@@ -300,7 +300,8 @@ const Container = styled.div`
             }
         }
         img {
-            width: 200px;
+            max-width: 350px;
+            width: 100%;
         }
 
         .circle {

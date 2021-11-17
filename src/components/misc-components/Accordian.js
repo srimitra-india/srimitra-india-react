@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 
 const Accordian = (props) => {
     const [expanded, setExpanded] = useState(false);
-    // .accordian-open
 
     return (
         <div

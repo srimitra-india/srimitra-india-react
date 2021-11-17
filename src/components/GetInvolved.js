@@ -2,6 +2,9 @@ import styled from "styled-components";
 import React from "react";
 import { Route } from "react-router";
 import Careers from "./geti-involved/Careers";
+import Volunteer from "./geti-involved/Volunteer";
+import GroceryStores from "./geti-involved/GroceryStores";
+import Orphanages from "./geti-involved/Orphanages";
 
 const GetInvolved = () => {
     return (
@@ -11,13 +14,13 @@ const GetInvolved = () => {
                     <Careers />
                 </Route>
                 <Route path="/get-involved/volunteer">
-                    <div>volunteer</div>
+                    <Volunteer />
                 </Route>
                 <Route path="/get-involved/grocery-stores">
-                    <div>grocery Stores</div>
+                    <GroceryStores />
                 </Route>
                 <Route path="/get-involved/orphanages">
-                    <div>orphanages</div>
+                    <Orphanages />
                 </Route>
             </Container>
         </Container>
@@ -25,11 +28,12 @@ const GetInvolved = () => {
 };
 
 const Container = styled.div`
-    background: white;
+    background-color: white;
     display: flex;
     justify-content: center;
-    /* display: grid; */
-    /* place-items: center; */
+    background-image: url("../../images/Logo_butterfly_only_dark.png");
+    background-repeat: repeat;
+    background-size: 150px;
     width: 100%;
 `;
 

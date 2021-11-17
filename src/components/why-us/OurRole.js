@@ -61,6 +61,7 @@ const OurRole = () => {
                     going to the very grass-roots levels, and onboarding them on
                     our app, thus being part of the VOCAL for LOCAL campaign.
                 </div>
+                <img src="/images/faq_ques.png" alt="process"></img>
             </div>
         </Container>
     );
@@ -82,6 +83,7 @@ const Container = styled.section`
         display: flex;
         align-items: flex-start;
         flex-direction: column;
+        align-items: center;
         gap: 1rem;
 
         .title {
@@ -91,6 +93,20 @@ const Container = styled.section`
         .para {
             font-weight: 450;
             letter-spacing: 1px;
+        }
+
+        img {
+            /* border: 1.5px solid; */
+            box-shadow: 0 0px 4px hsla(187, 100%, 23%, 0.5);
+            width: 100%;
+            max-width: 600px;
+            border-radius: 0.5rem;
+        }
+    }
+
+    @media (min-width: 700px) {
+        .content {
+            gap: 2rem;
         }
     }
 `;
